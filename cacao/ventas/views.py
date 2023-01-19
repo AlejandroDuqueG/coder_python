@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from ventas.models import Estudiante, Profesor, Curso
 
 def saludar(request):
     return HttpResponse(f'Hola, esto es una prueba!. Hora: {datetime.now()}')
