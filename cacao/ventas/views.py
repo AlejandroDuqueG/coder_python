@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
+from django.urls import reverse, reverse_lazy
+from django.shortcuts import render, redirect
 from ventas.models import Estudiante, Profesor, Curso
 
 def saludar(request):
@@ -34,3 +36,17 @@ def listar_cursos(request):
         template_name='ventas/lista_cursos.html',
         context=contexto,
     )
+
+def crear_curso(request):
+    """No se usa"""
+    if request.method == "POST":
+        data = request.POST
+        curso = Curso(nombre=data['nombre'], comision=data['comision'])
+        curso.save()
+        url_exitosa = reverse('listar_cursos')
+        return redirect(url_exitosa)
+    else:  # GET
+        return render(
+            request=request,
+            template_name='ventas/formulario_curso.html',
+        )
