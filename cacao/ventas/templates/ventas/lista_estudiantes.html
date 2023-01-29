@@ -1,6 +1,6 @@
 {% extends "ventas/base.html" %}
 
-{% block subtitulo %}Lista de ventas{% endblock subtitulo %}
+{% block subtitulo %}Lista de Estudiantes{% endblock subtitulo %}
 
 {% block estilos %}
 h1.titulos-coder {
@@ -10,16 +10,16 @@ h1.titulos-coder {
 
 {% block contenido %}
 {% include "ventas/barra_saludo.html" %}
-<h1 class="titulos-coder">Lista de ventas</h1>
+<h1 class="titulos-coder">Lista de estudiantes</h1>
 
 <table class="table">
   <tbody>
     <tr>
       <th>Nombre</th>
       <th>Apellido</th>
-      <td>Ver</td>
+      <!-- <td>Ver</td>
       <td>Editar</td>
-      <td>Eliminar</td>
+      <td>Eliminar</td> -->
     </tr>
     {% for alumno in object_list %}
     <tr>
