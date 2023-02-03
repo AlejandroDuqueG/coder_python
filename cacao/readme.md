@@ -26,4 +26,18 @@ python manage.py createsuperuser
 127.0.0.1:8000/admin
 ```
 
++ Super usuario credenciales:
 
+```
+user: admin
+pass: 1234abc
+```
+
+
+
++ Usuarios no staff:
+
+```
+user: alejandro_estudiante
+pass: xAb22BeI&ADM
+```
